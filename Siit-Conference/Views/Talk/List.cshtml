@@ -31,7 +31,7 @@
                 @Html.DisplayNameFor(model => model.Feedbackenabled)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpeakerId)
+                @Html.DisplayNameFor(model => model.Speaker.FullName)
             </th>
             <th></th>
         </tr>
@@ -58,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.Feedbackenabled)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SpeakerId)
+                @Html.DisplayFor(modelItem => item.Speaker.FullName)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
