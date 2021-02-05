@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Services.deps.json
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Services.dll
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Services.pdb
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Data.dll
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Domain.dll
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Data.pdb
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\bin\Debug\netstandard2.0\Conference.Domain.pdb
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.AssemblyInfo.cs
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.csproj.CopyComplete
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.dll
+C:\Users\User\source\repos\Siit-Conference\Conference.Services\obj\Debug\netstandard2.0\Conference.Services.pdb
