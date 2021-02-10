@@ -1,4 +1,4 @@
-﻿    @model IEnumerable<Siit_Conference.Models.SpeakerDto>
+﻿@model IEnumerable<Siit_Conference.Models.SpeakerDto>
 
 @{
     ViewData["Title"] = "List";
@@ -12,9 +12,7 @@
 <table class="table">
     <thead>
         <tr>
-            @*<th>
-            @Html.DisplayNameFor(model => model.Id)
-        </th>*@
+           
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
             </th>
@@ -82,7 +80,7 @@
         debugger;
         $.ajax({
             method: "DELETE",
-            url: "/Speakers/Delete/" + id,// /speakers/{id}
+            url: "/Speakers/Delete/" + id,
         }).done(function (data) {
             console.log(data);
            

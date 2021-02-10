@@ -28,10 +28,10 @@
                 @Html.DisplayNameFor(model => model.Active)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Feedbackenabled)
+                @Html.DisplayNameFor(model => model.FeedbackEnabled)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Speaker.FullName)
+                @Html.DisplayNameFor(model => model.SpeakerId)
             </th>
             <th></th>
         </tr>
@@ -55,19 +55,17 @@
                 @Html.DisplayFor(modelItem => item.Active)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Feedbackenabled)
+                @Html.DisplayFor(modelItem => item.FeedbackEnabled)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Speaker.FullName)
+                @Html.DisplayFor(modelItem => item.SpeakerId)
             </td>
 
             <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |            |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
 
-            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+           
         </td>
         </tr>
 }

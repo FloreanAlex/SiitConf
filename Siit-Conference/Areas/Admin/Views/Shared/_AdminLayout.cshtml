@@ -4,9 +4,15 @@
 <link rel="stylesheet" href="~/css/admin.css" />
 </head>
 <body>
-    <div style="background-color:red;">
-        Menu
+    <partial name="Menu" />
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
+    @*<div style="background-color:red;">
+        Menu
+    </div>*@
     @RenderBody()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

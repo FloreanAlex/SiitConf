@@ -14,7 +14,7 @@ namespace Conference.Domain
         public string Description { get; set; }
         public string Level { get; set; }
         public bool Active { get; set; }
-        public bool Feedbackenabled { get; set; }
+        public bool FeedbackEnabled { get; set; }
         public int SpeakerId { get; set; }
         public virtual Speaker Speaker { get; set; }
     }

@@ -14,10 +14,9 @@ namespace Siit_Conference.Models
         public string Description { get; set; }
         public string Level { get; set; }
         public bool Active { get; set; }
-        public bool Feedbackenabled { get; set; }
+        public bool FeedbackEnabled { get; set; }
 
         [DisplayName("Speaker Name")]
-       // public string SpeakerName { get; set; }
         public int SpeakerId { get; set; }
         public Speaker Speaker { get; set; }
     }

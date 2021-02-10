@@ -6,26 +6,22 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                 <ul class="navbar-nav flex-grow-1">
+        
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Speakers" asp-action="List">Speakers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Speakers" asp-action="List">Speakers</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Talk" asp-action="List">Talks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Talk" asp-action="List">Talks</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Workshop" asp-action="List">Workshops</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Workshop" asp-action="List">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
+                  
                 </ul>
             </div>
-            
         </div>
     </nav>
 </header>

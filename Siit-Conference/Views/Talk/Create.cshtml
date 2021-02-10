@@ -35,7 +35,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Feedbackenabled" /> @Html.DisplayNameFor(model => model.Feedbackenabled)
+                    <input class="form-check-input" asp-for="FeedbackEnabled" /> @Html.DisplayNameFor(model => model.FeedbackEnabled)
                 </label>
             </div>
 
@@ -71,7 +71,7 @@
     
 <script>
     function getSpeakerData(event) {
-        //  debugger;
+      
         var selectedId = event.options[event.selectedIndex].value;
         $.ajax({
             method: "GET",

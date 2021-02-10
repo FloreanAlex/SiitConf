@@ -1,4 +1,4 @@
-﻿    using AutoMapper;
+﻿using AutoMapper;
 using Conference.Domain;
 using Conference.Services;
 using Microsoft.AspNetCore.Mvc;
