@@ -9,12 +9,10 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table" id="talksTable">
     <thead>
         <tr>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>*@
+           
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
@@ -37,37 +35,59 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Id)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FeedbackEnabled)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SpeakerId)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpeakerId)
+                </td>
 
-            <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |            |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |            |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
 
-           
-        </td>
-        </tr>
-}
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+@section Scripts{
+
+    <script>
+
+    $(document).on("click", "#delete-item", function (event) {
+        event.preventDefault();
+        var url = $(this).attr('href');
+
+        $.ajax({
+            type: "DELETE",
+            url: url,
+            success: function (data) {
+                $("#talksTable").load(location.href + " #talksTable");
+            },
+            error: function (jqXHR, textStatus) {
+                console.log(textStatus);
+            }
+        });
+    });
+    </script>
+}

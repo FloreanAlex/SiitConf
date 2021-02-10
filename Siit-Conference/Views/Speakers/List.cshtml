@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create" asp-controller="Speakers">Create New</a>
 </p>
-<table class="table">
+<table class="table" id="speakersTable">
     <thead>
         <tr>
            
@@ -63,9 +63,9 @@
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "red", id = "edit-link" })|
                    @*<button id = "delete-item", onclick="deleteSpeaker(@item.Id);">Delete</button>*@
 
-                    <a href="javascript:void(0);" id="delete-item" onclick="deleteSpeaker(@item.Id);">Delete</a>
+                    @*<a href="javascript:void(0);" id="delete-item" onclick="deleteSpeaker(@item.Id);">Delete</a>*@
 
-                    @*@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { id = "delete-item", onclick="deleteSpeaker();"})*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { id = "delete-item"})
                 </td>
             </tr>
         }
@@ -76,15 +76,25 @@
 @section Scripts{ 
 
 <script>
-    function deleteSpeaker(id) {
-        debugger;
+    // Adding event on document instead of element itself because when window
+    // is loaded and the events added, this element might not be yet visible, so the click events ends up not 
+    // being added at all.
+    $(document).on("click", "#delete-item", function (event) {
+        // Stop the default
+        event.preventDefault();
+        // this is the clicked button and we take it's href attribute.
+        var url = $(this).attr('href');
+
         $.ajax({
-            method: "DELETE",
-            url: "/Speakers/Delete/" + id,
-        }).done(function (data) {
-            console.log(data);
-           
+            type: "DELETE",
+            url: url,
+            success: function (data) {
+                $("#speakersTable").load(location.href + " #speakersTable");
+            },
+            error: function (jqXHR, textStatus) {
+                console.log(textStatus);
+            }
         });
-    }
+    });
 </script>
 }

@@ -18,6 +18,6 @@ namespace Siit_Conference.Models
 
         [DisplayName("Speaker Name")]
         public int SpeakerId { get; set; }
-        public Speaker Speaker { get; set; }
+        public virtual Speaker Speaker { get; set; }
     }
 }
